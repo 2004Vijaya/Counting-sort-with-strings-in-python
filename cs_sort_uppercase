@@ -1,0 +1,17 @@
+def csort_string(s):
+    count=[0]*26
+    for char in s:
+        count[ord(char)-ord('A')]+=1
+    sorted_str=''
+    for i in range(26):
+        sorted_str+=chr(i+ord('A'))*count[i]
+    return sorted_str
+name=input("Enter a single word:")
+sorted_name=csort_string(name)
+print("Original string:",name)
+print("Sorted string:",sorted_name)
+
+output:
+Enter a single word: GFVHBJUIHRFOREJHBFVBVJHKDSFKJHWEOIUWELKSFDJBVFJHB
+Original string: GFVHBJUIHRFOREJHBFVBVJHKDSFKJHWEOIUWELKSFDJBVFJHB
+Sorted string: BBBBBDDEEEFFFFFFGHHHHHHIIJJJJJJKKKLOORRSSUUVVVVWW
